@@ -1,0 +1,50 @@
+autoinstall:
+  apt:
+    disable_components: []
+    fallback: offline-install
+    geoip: true
+    mirror-selection:
+      primary:
+        - country_mirror
+        - uri: http://ca.archive.ubuntu.com/ubuntu/
+    preserve_sources_list: false
+  codecs:
+    install: true
+  drivers:
+    install: true
+  identity:
+    hostname: fancy-lab-device-B1
+    password: usuario
+    realname: usuario usuario
+    username: usuario
+  kernel:
+    package: linux-generic-hwe-24.04
+  keyboard:
+    layout: us
+    toggle: null
+    variant: ""
+  locale: en_US.UTF-8
+  network:
+    ethernets:
+      enp1s0:
+        dhcp4: true
+    version: 2
+    wifis: {}
+  oem:
+    install: auto
+  source:
+    id: ubuntu-desktop-minimal
+    search_drivers: true
+  ssh:
+    allow-pw: true
+    authorized-keys: []
+    install-server: false
+  storage:
+    layout:
+      name: lvm
+      sizing-policy: all
+      match:
+        serial: KINGSTON_SNV*
+  timezone: Madrid/España
+  updates: security
+  version: 1
